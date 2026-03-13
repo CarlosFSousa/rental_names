@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest Details Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel hero-panel">
+        <p class="eyebrow">Accommodation Form</p>
+        <h1>Guest details</h1>
+        <p class="lede">
+          Please complete the details below for your stay. You can add up to 6
+          guests in the same form.
+        </p>
+        <div class="stay-summary">
+          <div>
+            <span class="summary-label">Start date</span>
+            <strong id="startDateText">Not provided</strong>
+          </div>
+          <div>
+            <span class="summary-label">End date</span>
+            <strong id="endDateText">Not provided</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div id="configWarning" class="notice warning" hidden>
+          Email sending is not configured yet. Add your EmailJS values in
+          `public/app.js`.
+        </div>
+
+        <div id="statusMessage" class="notice" hidden></div>
+
+        <form id="guestForm" class="stack">
+          <div class="guest-stack" id="guestFields"></div>
+
+          <button type="submit" id="submitButton">Send guest details</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Share Link</p>
+        <h2>How to send this form</h2>
+        <p class="lede">
+          Share the page with `start` and `end` parameters, for example:
+        </p>
+        <div class="share-box">
+          <code id="exampleLink">https://your-site.example/?start=2026-06-01&end=2026-06-07</code>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>

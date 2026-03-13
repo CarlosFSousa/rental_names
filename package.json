@@ -1,0 +1,8 @@
+{
+  "name": "rental_names",
+  "version": "1.0.0",
+  "description": "Static guest intake form for accommodation stays",
+  "scripts": {
+    "start": "python3 -m http.server 3000 -d public"
+  }
+}
